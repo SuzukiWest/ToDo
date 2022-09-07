@@ -1,0 +1,23 @@
+<!--drag+drop to order tasks-->
+
+<!--Change title by toDo/Completed-->
+<h1>ToDo's</h1>
+
+<!--Fill out task information-->
+<div *ngFor="let task of tasks">
+  <!--
+  task name
+  Button for complete
+  button for delete
+  button for add task
+
+  ?button for more details - [routerLink]
+-->
+
+  <p>
+    -
+    <a [title]="task.name + ' details'" [routerLink]="['/tasks', task.id]">
+      {{ task.name }}
+    </a>
+  </p>
+</div>
